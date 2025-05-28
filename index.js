@@ -6,11 +6,12 @@ const httpServer = http.createServer();
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "*", // Allow requests from any origin
+    origin: "https://moviie-client-git-main-abhay-chauhans-projects-e44e848d.vercel.app", // ✅ your frontend URL
     methods: ["GET", "POST"],
     credentials: true,
   },
 });
+
 
 io.on("connection", (socket) => {
   console.log("A user connected:", socket.id);
